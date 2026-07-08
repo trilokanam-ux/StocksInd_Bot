@@ -48,16 +48,8 @@ def support_button():
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = (
-        """You are just 1 step away from joining official telegram channel 🎯🎯🚀🚀
-
-Get Daily FREE trading calls from experts in nifty, bank nifty, commodities and equities
-
-✅ Receive daily trades and updates
-✅ Join Pre & post market live sessions
-
-👇 Click on below button to join official telegram channel 👇 
-
-https://t.me/OfficialKartikSharma"""
+        "Trade Your Favorite Stocks with the Best Stock Market Trading Platform\n"
+        "Experience the Best Trading Platform for US Stocks, Global Stocks, Indices, ETFs, Mutual Funds, IPOs, and NRI Investing."
     )
     await update.message.reply_text(text=text, reply_markup=open_button())
 
