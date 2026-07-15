@@ -1,10 +1,11 @@
-import os
+\import os
 
 from telegram import (
     Update,
     InlineKeyboardButton,
     InlineKeyboardMarkup,
     MenuButtonCommands,
+    WebAppInfo,
 )
 
 from telegram.ext import (
@@ -18,17 +19,20 @@ from telegram.ext import (
 # =========================
 
 BOT_TOKEN   = os.environ.get("BOT_TOKEN")
-WEBAPP_URL  = os.environ.get("WEBAPP_URL")
+WEBAPP_URL  = os.environ.get("WEBAPP_URL")   # must be HTTPS
 SUPPORT_URL = os.environ.get("SUPPORT_URL")
 
 
 # =========================
-# OPEN BUTTON
+# OPEN BUTTON (Mini App)
 # =========================
 
 def open_button():
     return InlineKeyboardMarkup([[
-        InlineKeyboardButton(text="Join", url=WEBAPP_URL)
+        InlineKeyboardButton(
+            text="Open",
+            web_app=WebAppInfo(url=WEBAPP_URL)
+        )
     ]])
 
 
